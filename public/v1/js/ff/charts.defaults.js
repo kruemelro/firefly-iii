@@ -85,6 +85,7 @@ var defaultChartOptions = {
                     display: false
                 },
                 ticks: {
+                    fontColor: "#eff0f1",
                     // break ticks when too long.
                     callback: function (value, index, values) {
                         return formatLabel(value, 20);
@@ -94,7 +95,11 @@ var defaultChartOptions = {
         ],
         yAxes: [{
             display: true,
+            gridLines: {
+                    color: "#616161"
+            },
             ticks: {
+                fontColor: "#eff0f1",
                 callback: function (tickValue) {
                     "use strict";
                     // use first symbol or null:

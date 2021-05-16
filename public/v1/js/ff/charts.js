@@ -25,29 +25,29 @@ var allCharts = {};
  Make some colours:
  */
 var colourSet = [
-    [53, 124, 165],
-    [0, 141, 76], // green
-    [219, 139, 11],
-    [202, 25, 90], // paars rood-ish #CA195A
-    [85, 82, 153],
-    [66, 133, 244],
-    [219, 68, 55], // red #DB4437
-    [244, 180, 0],
-    [15, 157, 88],
-    [171, 71, 188],
-    [0, 172, 193],
-    [255, 112, 67],
-    [158, 157, 36],
-    [92, 107, 192],
-    [240, 98, 146],
-    [0, 121, 107],
-    [194, 24, 91]
+    [0, 130, 240], //Blue
+    [15, 195, 115], // green
+    [175, 120, 210], //Purple
+    [255, 50, 50], // Red
+    [250, 210, 45], // Yellow
+    [255, 140, 10], //Orange
+    [102, 181, 244], // Blue 2
+    [112, 219, 170], // Green 2
+    [206, 173, 226], // Purple 2
+    [255, 132, 132], // Red 2
+    [252, 226, 130], // Yellow 2
+    [254, 186, 126], // Orange 2
+    [0, 104, 191], // Blue 4
+    [12, 155, 91], // Green 4
+    [140, 96, 168], // Purple 4
+    [204, 40, 40], // Red 4
+    [198, 168, 35] // Yellow 4
 ];
 
 var fillColors = [];
 
 for (var i = 0; i < colourSet.length; i++) {
-    fillColors.push("rgba(" + colourSet[i][0] + ", " + colourSet[i][1] + ", " + colourSet[i][2] + ", 0.5)");
+    fillColors.push("rgba(" + colourSet[i][0] + ", " + colourSet[i][1] + ", " + colourSet[i][2] + ", 1.0)");
 }
 
 Chart.defaults.global.legend.display = false;
@@ -416,7 +416,7 @@ function drawAChart(URI, container, chartType, options, colorData) {
                                 backgroundColor: 'rgba(0,0,0,0)',
                                 fontFamily: "sans-serif",
                                 fontSize: 12,
-                                fontColor: "#333",
+                                fontColor: "#eff0f1",
                                 position: "right",
                                 xAdjust: -20,
                                 yAdjust: -125,
