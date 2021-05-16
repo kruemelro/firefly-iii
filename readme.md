@@ -1,8 +1,3 @@
-[![Packagist][packagist-shield]][packagist-url]
-[![License][license-shield]][license-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Donate][donate-shield]][donate-uri]
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
