@@ -1,12 +1,12 @@
-<div class="row hidden-xs">
+<div class="row">
     {# box for in and out (balance) #}
     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
         <div class="info-box bg-aqua-gradient" id="box_out_holder">
-            <span class="info-box-icon"><i class="fa fa-balance-scale"></i></span>
+            <span class="info-box-icon"><i id="box_out_holder_icon" class="fa fa-question"></i></span>
 
             <div class="info-box-content">
                 <span class="info-box-text">
-                    <a href="{{ route('reports.report.default', ['allAssetAccounts',start.format('Ymd'),end.format('Ymd')]) }}">{{ 'balance'|_ }}</a></span>
+                    <a href="{{ route('reports.report.default', ['allAssetAccounts',start.format('Ymd'),end.format('Ymd')]) }}">{{ 'cleaned_networth'|_ }}</a></span>
                 <span class="info-box-number" id="box-balance-sums"></span>
 
                 <div class="progress" id="box-balance-progress">
@@ -21,8 +21,8 @@
 
     {# box for bills #}
     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-        <div class="info-box bg-teal-gradient">
-            <span class="info-box-icon"><i class="fa fa-calendar-o"></i></span>
+        <div class="info-box bg-aqua-gradient" id="box_bills-box">
+            <span class="info-box-icon"><i class="fa fa-file-text-o"></i></span>
 
             <div class="info-box-content">
                 <span class="info-box-text"><a href="{{ route('bills.index') }}">{{ 'bills_to_pay'|_ }}</a></span>
@@ -41,7 +41,7 @@
 
     {#  available to spend total / per day #}
     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-        <div class="info-box bg-green-gradient" id="box-left-to-spend-box">
+        <div class="info-box bg-aqua-gradient" id="box-left-to-spend-box">
             <span class="info-box-icon"><i class="fa fa-money"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text"><a id="box-left-to-spend-text" href="{{ route('budgets.index') }}">{{ 'left_to_spend'|_ }}</a></span>
@@ -61,17 +61,19 @@
     {# net worth #}
     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
         <div class="info-box bg-blue-gradient">
-            <span class="info-box-icon"><i class="fa fa-line-chart"></i></span>
+            <span class="info-box-icon"><i class="fa fa-balance-scale"></i></span>
 
             <div class="info-box-content">
                 <span class="info-box-text">
-                    <a href="{{ route('reports.report.default', ['allAssetAccounts','currentYearStart','currentYearEnd']) }}">{{ 'net_worth'|_ }}</a></span>
+                    <a href="{{ route('reports.report.default', ['allAssetAccounts','currentYearStart','currentYearEnd']) }}">{{ 'balance'|_ }}</a></span>
                 <span class="info-box-number" id="box-net-worth"></span>
 
                 <div class="progress">
                     <div class="progress-bar" style="width: 0%"></div>
                 </div>
                 <span class="progress-description"></span>
+                {{ 'planed_income'|_ }}:
+                    <span title="{{ 'plan_income'|_ }}" id="box-plan-income"></span>
             </div>
         </div>
     </div>

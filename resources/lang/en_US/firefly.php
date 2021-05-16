@@ -1300,6 +1300,8 @@ return [
     'custom_period'                             => 'Custom period',
     'reset_to_current'                          => 'Reset to current period',
     'select_period'                             => 'Select a period',
+    'cleaned_networth'                          => 'Cleaned Balance',
+    'planed_income'                             => 'planed Income',
 
     // menu and titles, should be recycled as often as possible:
     'currency'                                  => 'Currency',

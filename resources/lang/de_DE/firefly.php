@@ -1300,6 +1300,8 @@ return [
     'custom_period'                             => 'Benutzerdefinierter Zeitraum',
     'reset_to_current'                          => 'Auf aktuellen Zeitraum zurücksetzen',
     'select_period'                             => 'Zeitraum auswählen',
+    'cleaned_networth'                          => 'Bereinigter Kontostand',
+    'planed_income'                             => 'Geplante Einnahmen',
 
     // menu and titles, should be recycled as often as possible:
     'currency'                                  => 'Währung',
